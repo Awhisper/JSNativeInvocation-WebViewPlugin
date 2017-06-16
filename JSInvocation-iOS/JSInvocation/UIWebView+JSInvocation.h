@@ -10,6 +10,6 @@
 
 @interface UIWebView (JSInvocation)
 
--(void)enableJSInvocation;
+-(void)setJSInvocation;
 
 @end

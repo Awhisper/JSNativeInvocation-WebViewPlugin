@@ -10,7 +10,11 @@
 
 @implementation UIWebView (JSInvocation)
 
--(void)enableJSInvocation{
+-(void)setJSInvocation{
+    
+}
+
+-(void)setJSContext{
     
 }
 

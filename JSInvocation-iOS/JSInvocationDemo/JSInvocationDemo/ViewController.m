@@ -18,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIWebView * webv = [[UIWebView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:webv];
+    [webv setJSInvocation];
+    NSURLRequest *urlreq = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"http://cp01-awhisper.epc.baidu.com:8085/home/jsinvoke"]];
+    [webv loadRequest:urlreq];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
