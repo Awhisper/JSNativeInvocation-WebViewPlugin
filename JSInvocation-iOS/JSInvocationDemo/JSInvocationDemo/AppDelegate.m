@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  JSInvocation-iOS
+//  JSInvocationDemo
 //
 //  Created by Awhisper on 2017/6/16.
 //  Copyright © 2017年 baidu. All rights reserved.
