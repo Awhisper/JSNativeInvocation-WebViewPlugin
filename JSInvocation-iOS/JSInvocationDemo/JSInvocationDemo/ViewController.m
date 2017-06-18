@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 #import "UIWebView+JSInvocation.h"
-
-@interface ViewController ()
-
+#import "JSInvocationUtil.h"
+@interface ViewController ()<UIWebViewDelegate>
+@property(nonatomic,strong) UIWebView* webv;
 @end
 
 @implementation ViewController
@@ -20,10 +20,18 @@
     
     UIWebView * webv = [[UIWebView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:webv];
-    [webv setJSInvocation];
+    webv.delegate = self;
+    self.webv = webv;
     NSURLRequest *urlreq = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"http://cp01-awhisper.epc.baidu.com:8085/home/jsinvoke"]];
     [webv loadRequest:urlreq];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    [self.webv setJSInvocation];
+    JI_INFO(@"AAAAAAAA%@",@"abc");
+    JI_ERROR(@"aaaaaaa%@",@"abc");
+    JI_ASSERT(NO, @"AAAAA");
 }
 
 

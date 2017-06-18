@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6C13AACC1EF3B187000112A6"
+               BlueprintIdentifier = "6CFF36BE1EF6B28A0056A7E7"
                BuildableName = "JSInvocationDemo.app"
                BlueprintName = "JSInvocationDemo"
                ReferencedContainer = "container:JSInvocationDemo.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C13AACC1EF3B187000112A6"
+            BlueprintIdentifier = "6CFF36BE1EF6B28A0056A7E7"
             BuildableName = "JSInvocationDemo.app"
             BlueprintName = "JSInvocationDemo"
             ReferencedContainer = "container:JSInvocationDemo.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C13AACC1EF3B187000112A6"
+            BlueprintIdentifier = "6CFF36BE1EF6B28A0056A7E7"
             BuildableName = "JSInvocationDemo.app"
             BlueprintName = "JSInvocationDemo"
             ReferencedContainer = "container:JSInvocationDemo.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C13AACC1EF3B187000112A6"
+            BlueprintIdentifier = "6CFF36BE1EF6B28A0056A7E7"
             BuildableName = "JSInvocationDemo.app"
             BlueprintName = "JSInvocationDemo"
             ReferencedContainer = "container:JSInvocationDemo.xcodeproj">
