@@ -16,6 +16,6 @@
                             JI_ASSERT(NO,([NSString stringWithFormat:(fmt), ##__VA_ARGS__]))
 
 
-@interface JSInvocationUtil : NSObject
+@interface JIUtil : NSObject
 
 @end

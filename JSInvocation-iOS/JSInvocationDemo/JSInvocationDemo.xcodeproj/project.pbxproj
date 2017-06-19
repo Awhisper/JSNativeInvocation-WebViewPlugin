@@ -15,7 +15,7 @@
 		6CFF36D21EF6B28B0056A7E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CFF36D01EF6B28B0056A7E7 /* LaunchScreen.storyboard */; };
 		6CFF36DC1EF6B2A40056A7E7 /* UIWebView+JSInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF36DB1EF6B2A40056A7E7 /* UIWebView+JSInvocation.m */; };
 		6CFF36DF1EF6CA3B0056A7E7 /* JITypeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF36DE1EF6CA3B0056A7E7 /* JITypeUtil.m */; };
-		6CFF36E21EF6CB670056A7E7 /* JSInvocationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF36E11EF6CB670056A7E7 /* JSInvocationUtil.m */; };
+		6CFF36E21EF6CB670056A7E7 /* JIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF36E11EF6CB670056A7E7 /* JIUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		6CFF36DB1EF6B2A40056A7E7 /* UIWebView+JSInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JSInvocation.m"; sourceTree = "<group>"; };
 		6CFF36DD1EF6CA3B0056A7E7 /* JITypeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JITypeUtil.h; sourceTree = "<group>"; };
 		6CFF36DE1EF6CA3B0056A7E7 /* JITypeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JITypeUtil.m; sourceTree = "<group>"; };
-		6CFF36E01EF6CB670056A7E7 /* JSInvocationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSInvocationUtil.h; sourceTree = "<group>"; };
-		6CFF36E11EF6CB670056A7E7 /* JSInvocationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSInvocationUtil.m; sourceTree = "<group>"; };
+		6CFF36E01EF6CB670056A7E7 /* JIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JIUtil.h; sourceTree = "<group>"; };
+		6CFF36E11EF6CB670056A7E7 /* JIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JIUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +96,8 @@
 				6CFF36DB1EF6B2A40056A7E7 /* UIWebView+JSInvocation.m */,
 				6CFF36DD1EF6CA3B0056A7E7 /* JITypeUtil.h */,
 				6CFF36DE1EF6CA3B0056A7E7 /* JITypeUtil.m */,
-				6CFF36E01EF6CB670056A7E7 /* JSInvocationUtil.h */,
-				6CFF36E11EF6CB670056A7E7 /* JSInvocationUtil.m */,
+				6CFF36E01EF6CB670056A7E7 /* JIUtil.h */,
+				6CFF36E11EF6CB670056A7E7 /* JIUtil.m */,
 			);
 			name = JSInvocation;
 			path = ../JSInvocation;
@@ -174,7 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CFF36E21EF6CB670056A7E7 /* JSInvocationUtil.m in Sources */,
+				6CFF36E21EF6CB670056A7E7 /* JIUtil.m in Sources */,
 				6CFF36DC1EF6B2A40056A7E7 /* UIWebView+JSInvocation.m in Sources */,
 				6CFF36DF1EF6CA3B0056A7E7 /* JITypeUtil.m in Sources */,
 				6CFF36CA1EF6B28B0056A7E7 /* ViewController.m in Sources */,

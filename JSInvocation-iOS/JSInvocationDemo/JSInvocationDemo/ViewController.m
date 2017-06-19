@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "UIWebView+JSInvocation.h"
-#import "JSInvocationUtil.h"
+#import "JIUtil.h"
 @interface ViewController ()<UIWebViewDelegate>
 @property(nonatomic,strong) UIWebView* webv;
 @end
@@ -29,9 +29,6 @@
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     [self.webv setJSInvocation];
-    JI_INFO(@"AAAAAAAA%@",@"abc");
-    JI_ERROR(@"aaaaaaa%@",@"abc");
-    JI_ASSERT(NO, @"AAAAA");
 }
 
 

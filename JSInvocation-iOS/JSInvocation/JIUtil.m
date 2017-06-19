@@ -6,8 +6,8 @@
 //  Copyright © 2017年 baidu. All rights reserved.
 //
 
-#import "JSInvocationUtil.h"
+#import "JIUtil.h"
 
-@implementation JSInvocationUtil
+@implementation JIUtil
 
 @end
