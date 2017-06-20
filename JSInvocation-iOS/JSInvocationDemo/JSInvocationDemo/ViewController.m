@@ -29,6 +29,14 @@
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     [self.webv setJSInvocation];
+    
+    void (^outputblock)() = ^{
+        NSLog(@"－－－－－－－－－－－－");
+    };
+    
+    NSString * n = NSStringFromClass([outputblock class]);
+    NSLog(@"11");
+
 }
 
 
