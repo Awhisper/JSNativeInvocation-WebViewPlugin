@@ -42,6 +42,21 @@
 
 #pragma mark - 
 
+- (id)__JI_getSelf{
+    return @{@"__self__":@"__self__"};
+}
+
+- (BOOL)__JI_isSelf:(NSDictionary *)dict{
+    if ( [dict objectForKey:@"__self__"] )
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
 - (BOOL)__JI_isNil:(NSDictionary *)dict{
     if ( [dict objectForKey:@"__nil__"] )
     {
@@ -63,6 +78,36 @@
     });
     
     return value;
+}
+
+
+- (BOOL)__JI_isClass:(NSDictionary *)dict{
+    if ( [dict objectForKey:@"__class__"] )
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
+
+- (id)__JI_genClass:(id)clazz{
+    if (clazz) {
+        NSString *className = NSStringFromClass(clazz);
+        return @{ @"__class__" : className};
+    }
+    return nil;
+}
+
+- (id)__JI_getClass:(NSDictionary *)dict{
+    NSString *className = [dict objectForKey:@"__class__"];
+    Class clazz = NSClassFromString(className);
+    if (clazz) {
+        return clazz;
+    }
+    return nil;
 }
 
 - (BOOL)__JI_isObj:(NSDictionary *)dict{
@@ -91,7 +136,6 @@
         NSString *className = NSStringFromClass([object class]);
         NSString *hashkey = [NSString stringWithFormat:@"__JSCMemory_%@_%@",className,@(hash)];
         [self.jscMemory setObject:object forKey:hashkey];
-        
         return @{ @"__obj__" : hashkey, @"__cls__" : className };
     }
     return nil;
@@ -104,11 +148,18 @@
         return [self __JI_genNil];
     }
     
+    if ([object isEqual:self]) {
+        return [self __JI_getSelf];
+    }
+    
     JIClassType objectType = [JITypeUtil classTypeOfObject:object];
     
     if ( JIClassType_NSNULL == objectType )
     {
         return [self __JI_genNil];
+    }
+    else if( JIClassType_Class == objectType){
+        return [self __JI_genClass:object];
     }
     else if ( JIClassType_NSNumber == objectType )
     {
@@ -167,14 +218,14 @@
 
         return result;
     }
-    //    else if ( ClassType_NSBlock == objectType )
-    //    {
-    //        return __JS__makeObj( [object copy] );
-    //    }
-    //    else
-    //    {
-    //        return __JS__makeObj( object );
-    //    }
+    else if ( JIClassType_NSBlock == objectType )
+    {
+        return [self __JI_genObj:[object copy]];
+    }
+    else
+    {
+        return [self __JI_genObj:object];
+    }
     return nil;
 }
 
@@ -229,9 +280,15 @@
         {
             return nil;
         }
+        else if ([self __JI_isClass:(NSDictionary *)object])
+        {
+            return [self __JI_getClass:(NSDictionary *)object];
+        }
         else if ([self __JI_isObj:(NSDictionary *)object])
         {
             return [self __JI_getObj:(NSDictionary *)object];
+        }else if ([self __JI_isSelf:(NSDictionary *)object]){
+            return self;
         }
         else
         {
@@ -259,14 +316,14 @@
 
         return result;
     }
-    //    else if ( ClassType_NSBlock == objectType )
-    //    {
-    //        return [object copy];
-    //    }
-    //    else
-    //    {
-    //        return object;
-    //    }
+    else if ( JIClassType_NSBlock == objectType )
+    {
+        return [object copy];
+    }
+    else
+    {
+        return object;
+    }
     return nil;
 }
 

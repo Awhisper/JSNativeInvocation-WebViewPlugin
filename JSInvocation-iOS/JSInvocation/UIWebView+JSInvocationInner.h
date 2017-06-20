@@ -15,6 +15,10 @@
 
 -(void)clearJscMemory;
 
+- (id)__JI_getSelf;
+
+- (BOOL)__JI_isSelf:(NSDictionary *)dict;
+
 - (BOOL)__JI_isNil:(NSDictionary *)dict;
 
 - (id)__JI_genNil;
@@ -24,6 +28,12 @@
 - (id)__JI_getObj:(NSDictionary *)dict;
 
 - (id)__JI_genObj:(id)object;
+
+- (BOOL)__JI_isClass:(NSDictionary *)dict;
+
+- (id)__JI_getClass:(NSDictionary *)dict;
+
+- (id)__JI_genClass:(id)object;
 
 - (id)__JI__wrap:(NSObject *)object;
 

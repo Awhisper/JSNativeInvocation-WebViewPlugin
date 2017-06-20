@@ -19,7 +19,8 @@ typedef enum : NSUInteger {
     JIClassType_NSDictionary,
     JIClassType_NSSet,
     JIClassType_NSBlock,
-    JIClassType_NSObject
+    JIClassType_NSObject,
+    JIClassType_Class
 } JIClassType;
 
 typedef enum : NSUInteger {
